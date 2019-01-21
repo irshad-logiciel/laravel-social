@@ -78,12 +78,12 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
+            <p>LOADING...</p>
+            <!-- <div class="content">
                 <div class="title m-b-md">
                     WELCOME
                 </div>
-            </div>
+            </div> -->
         </div>
     </body>
 </html>

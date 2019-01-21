@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/base', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/redirect', 'SocialAuthTwitterController@redirect');
-Route::get('/callback', 'SocialAuthTwitterController@callback');
+Route::get('/', 'SocialAuthTwitterController@callback');
 
 Route::get('/home', 'HomeController@index')->name('home');

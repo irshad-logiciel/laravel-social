@@ -44,7 +44,6 @@ return [
         'client_id' => 'DzV9GeOEGob3OnN6SQqBTDBlf',
         'client_secret' => 'UwZXKPWRIRZffI492PU1zZjCUXqMufXCHK4yHeijsWntDjebjb',
         'redirect' => 'http://localhost:8000',
-        // 'redirect' => 'http://localhost:8000/callback',
     ],
 
 ];

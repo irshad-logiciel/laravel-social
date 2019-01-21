@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Socialite;
+use App\Services\SocialTwitterAccountService;
 
 class SocialAuthTwitterController extends Controller
 {
@@ -24,8 +25,12 @@ class SocialAuthTwitterController extends Controller
      */
     public function callback(SocialTwitterAccountService $service)
     {
+      try{
         $user = $service->createOrGetUser(Socialite::driver('twitter')->user());
         auth()->login($user);
         return redirect()->to('/home');
+      } catch(\Exception $e) {
+        return redirect('/base');
+      }
     }
 }
